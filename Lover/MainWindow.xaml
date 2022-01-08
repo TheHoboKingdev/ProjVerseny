@@ -19,7 +19,7 @@
         <Label Content="Ló 3" HorizontalAlignment="Left" Margin="46,391,0,0" VerticalAlignment="Top"/>
 
         <Button Name="nr" Content="Új verseny" HorizontalAlignment="Left" Margin="140,422,0,0" VerticalAlignment="Top" Width="151" Click="Button_Click"/>
-        <Button Name="sr" Content="Versenyek összesítése" HorizontalAlignment="Left" Margin="345,422,0,0" VerticalAlignment="Top" Width="151"/>
+        <Button Name="sr" Content="Versenyek összesítése" HorizontalAlignment="Left" Margin="345,422,0,0" VerticalAlignment="Top" Width="151" Click="sr_Click"/>
         <Button Name="nc" Content="Új bajnokság" HorizontalAlignment="Left" Margin="556,422,0,0" VerticalAlignment="Top" Width="151"/>
         <Label Name="cs11" Content="" HorizontalAlignment="Left" Margin="287,327,0,0" VerticalAlignment="Top"/>
         <Label Name="cs21" Content="" HorizontalAlignment="Left" Margin="287,358,0,0" VerticalAlignment="Top"/>
