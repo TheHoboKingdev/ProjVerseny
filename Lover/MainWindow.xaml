@@ -5,46 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lover"
         mc:Ignorable="d"
-        Title="Lóverseny" Height="450" Width="800">
+        Title="Lóverseny" Height="500" Width="800">
     <Grid>
 
 
-        <Label Content="Bajnokság eredményei" HorizontalAlignment="Left" Margin="46,280,0,0" VerticalAlignment="Top"/>
-        <Label Content="1. verseny" HorizontalAlignment="Left" Margin="256,280,0,0" VerticalAlignment="Top"/>
-        <Label Content="2. verseny" HorizontalAlignment="Left" Margin="376,280,0,0" VerticalAlignment="Top"/>
-        <Label Content="3. verseny" HorizontalAlignment="Left" Margin="505,280,0,0" VerticalAlignment="Top"/>
-        <Label Content="Végeredmény" HorizontalAlignment="Left" Margin="660,280,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ló 1" HorizontalAlignment="Left" Margin="46,311,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ló 2" HorizontalAlignment="Left" Margin="46,342,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ló 3" HorizontalAlignment="Left" Margin="46,373,0,0" VerticalAlignment="Top"/>
+        <Label Content="Bajnokság eredményei" HorizontalAlignment="Left" Margin="46,306,0,0" VerticalAlignment="Top"/>
+        <Label Content="1. verseny" HorizontalAlignment="Left" Margin="256,306,0,0" VerticalAlignment="Top"/>
+        <Label Content="2. verseny" HorizontalAlignment="Left" Margin="376,306,0,0" VerticalAlignment="Top"/>
+        <Label Content="3. verseny" HorizontalAlignment="Left" Margin="505,306,0,0" VerticalAlignment="Top"/>
+        <Label Content="Végeredmény" HorizontalAlignment="Left" Margin="660,306,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ló 1" HorizontalAlignment="Left" Margin="46,329,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ló 2" HorizontalAlignment="Left" Margin="46,360,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ló 3" HorizontalAlignment="Left" Margin="46,391,0,0" VerticalAlignment="Top"/>
 
-        <Button Name="nr" Content="Új verseny" HorizontalAlignment="Left" Margin="140,404,0,0" VerticalAlignment="Top" Width="151" Click="Button_Click"/>
-        <Button Name="sr" Content="Versenyek összesítése" HorizontalAlignment="Left" Margin="345,404,0,0" VerticalAlignment="Top" Width="151"/>
-        <Button Name="nc" Content="Új bajnokság" HorizontalAlignment="Left" Margin="556,404,0,0" VerticalAlignment="Top" Width="151"/>
-        <Label Name="cs11" Content="" HorizontalAlignment="Left" Margin="287,309,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs21" Content="" HorizontalAlignment="Left" Margin="287,340,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs31" Content="" HorizontalAlignment="Left" Margin="287,371,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs12" Content="" HorizontalAlignment="Left" Margin="407,311,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs22" Content="" HorizontalAlignment="Left" Margin="407,342,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs32" Content="" HorizontalAlignment="Left" Margin="407,373,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs13" Content="" HorizontalAlignment="Left" Margin="536,311,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs23" Content="" HorizontalAlignment="Left" Margin="536,342,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs33" Content="" HorizontalAlignment="Left" Margin="536,373,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs1v" Content="" HorizontalAlignment="Left" Margin="697,311,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs2v" Content="" HorizontalAlignment="Left" Margin="697,342,0,0" VerticalAlignment="Top"/>
-        <Label Name="cs3v" Content="" HorizontalAlignment="Left" Margin="697,373,0,0" VerticalAlignment="Top"/>
+        <Button Name="nr" Content="Új verseny" HorizontalAlignment="Left" Margin="140,422,0,0" VerticalAlignment="Top" Width="151" Click="Button_Click"/>
+        <Button Name="sr" Content="Versenyek összesítése" HorizontalAlignment="Left" Margin="345,422,0,0" VerticalAlignment="Top" Width="151"/>
+        <Button Name="nc" Content="Új bajnokság" HorizontalAlignment="Left" Margin="556,422,0,0" VerticalAlignment="Top" Width="151"/>
+        <Label Name="cs11" Content="" HorizontalAlignment="Left" Margin="287,327,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs21" Content="" HorizontalAlignment="Left" Margin="287,358,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs31" Content="" HorizontalAlignment="Left" Margin="287,389,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs12" Content="" HorizontalAlignment="Left" Margin="407,329,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs22" Content="" HorizontalAlignment="Left" Margin="407,360,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs32" Content="" HorizontalAlignment="Left" Margin="407,391,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs13" Content="" HorizontalAlignment="Left" Margin="536,329,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs23" Content="" HorizontalAlignment="Left" Margin="536,360,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs33" Content="" HorizontalAlignment="Left" Margin="536,391,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs1v" Content="" HorizontalAlignment="Left" Margin="697,329,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs2v" Content="" HorizontalAlignment="Left" Margin="697,360,0,0" VerticalAlignment="Top"/>
+        <Label Name="cs3v" Content="" HorizontalAlignment="Left" Margin="697,391,0,0" VerticalAlignment="Top"/>
 
 
         <Rectangle Name="p1" Height="91" Stroke="Black" Width="751" Margin="10,184,39,159"/>
         <Rectangle Name="p2" Height="90" Stroke="Black" Width="751" Margin="10,96,39,248"/>
         <Rectangle Name="p3" Height="86" Stroke="Black" Width="751" Margin="10,10,39,338"/>
         <TextBlock Name="start" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="START" VerticalAlignment="Top" Height="263" Width="40" FontFamily="Comic Sans MS" FontSize="36" Background="#FFB3FFA4"/>
-        <Image Name="Lo1" Source="/lo1.png" RenderTransformOrigin="0.5,0.5" Margin="49,14,668,338"/>
-        <Image Name="Lo2" Source="/lo2.png" RenderTransformOrigin="0.5,0.5" Margin="48,112,666,264"/>
-        <Image Name="Lo3" Source="/lo3.png" RenderTransformOrigin="0.5,0.5" Margin="50,200,667,175"/>
         <TextBlock Name="cel" HorizontalAlignment="Left" Margin="721,12,0,0" TextWrapping="Wrap" Text="CÉL" VerticalAlignment="Top" Height="263" Width="40" FontFamily="Comic Sans MS" FontSize="60" Background="#FFFAFFA4"/>
-        
-
-
+        <Image Name="Lo1" Source="/lo1.png" RenderTransformOrigin="0.5,0.5" Margin="49,14,670,338"/>
+        <Image Name="Lo2" Source="/lo2.png" RenderTransformOrigin="0.5,0.5" Margin="48,112,670,264"/>
+        <Image Name="Lo3" Source="/lo3.png" RenderTransformOrigin="0.5,0.5" Margin="50,200,670,175"/>
     </Grid>
 </Window>
