@@ -1,0 +1,2 @@
+# ProjVerseny
+ Egy egyszerű lóversenyszimuláció
