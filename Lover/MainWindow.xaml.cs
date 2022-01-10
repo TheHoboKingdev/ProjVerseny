@@ -35,13 +35,17 @@ namespace Lover
         bool l2_kesz = false;
         bool l3_kesz = false;
 
+        DispatcherTimer timer = new DispatcherTimer();
+
+
         
 
         public MainWindow()
         {
             InitializeComponent();
 
-             
+            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,12 +55,15 @@ namespace Lover
             Lo3.Margin = new Thickness(start.Margin.Left, 200, 667, 175);
             verseny += 1;
 
+            elso = 0;
+            masodik = 0;
+            harmadik = 0;
+
             nr.IsEnabled = false;
             nc.IsEnabled = false;
             sr.IsEnabled = false;
 
 
-            DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(0.1);
             timer.Start();
             timer.Tick += timer_tick;
@@ -77,84 +84,84 @@ namespace Lover
                 l1_pos += l1_mov;
             }
             else
-                if (elso == 0)
             {
-                elso = 1;
-                l1E.Add(1);
-                l1_kesz = true;
-            }
-            else
-                if (masodik == 0)
+                if (elso == 0)
+                {
+                    elso = 1;
+                    l1E.Add(1);
+
+                }
+                else if (masodik == 0)
                 {
                     masodik = 1;
                     l1E.Add(2);
-                    l1_kesz = true;
+
                 }
-            
-            else 
-                if (harmadik == 0)
+                else if (harmadik == 0)
                 {
                     harmadik = 1;
-                    l1E.Add(3);
-                    l1_kesz = true;
-                }
-        
+                    l1E.Add(2);
 
+                }
+                l1_kesz = true;
+            }
             if (l2_pos >= -550)
             {
                 Lo2.Margin = new Thickness(l2_mov, 112, l2_pos - l2_mov, 264);
                 l2_pos += l2_mov;
             }
             else
- 
+            {
                 if (elso == 0)
                 {
                     elso = 2;
                     l2E.Add(1);
-                    l2_kesz = true;
+
                 }
-                else
-                if (masodik == 0)
+                else if (masodik == 0)
                 {
                     masodik = 2;
                     l2E.Add(2);
-                    l2_kesz = true;
+
                 }
-                else
-                if (harmadik == 0)
+                else if (harmadik == 0)
                 {
                     harmadik = 2;
                     l2E.Add(3);
-                    l2_kesz = true;
+
                 }
+                l2_kesz = true;
+            }
 
             if (l3_pos >= -550)
             {
                 Lo3.Margin = new Thickness(l3_mov, 200, l3_pos - l3_mov, 175);
                 l3_pos += l3_mov;
             }
-            else if (elso == 0)
-            {
-                l3E.Add(1);
-                elso = 3;
-                l3_kesz = true;
-            }
             else
-                if (masodik == 0)
             {
-                l3E.Add(2);
-                masodik = 3;
-                l3_kesz = true;
-            }
-            else
-                if (harmadik == 0)
-            {
-                l3E.Add(3);
-                harmadik = 3;
-                l3_kesz = true;
-            }
+                if (elso == 0)
+                {
+                    elso = 3;
+                    l3E.Add(1);
 
-            if (l1_kesz == true && l2_kesz == true && l3_kesz == true)
+                }
+                else if (masodik == 0)
+                {
+                     masodik = 3;
+                     l3E.Add(2);
+
+                }
+                
+                else if (harmadik == 0)
+                {
+                    harmadik = 3;
+                    l3E.Add(2);
+
+                }
+                l3_kesz = true;
+            }
+            if (l3_kesz == true && l2_kesz == true && l1_kesz == true)
             {
                 Jegyzes();
             }
@@ -162,6 +169,7 @@ namespace Lover
 
         private void Jegyzes() 
         {
+            timer.Stop();
             switch (verseny) 
             {
                 case 1:
@@ -180,7 +188,10 @@ namespace Lover
                     cs33.Content = l3E[2];
                     break;
                 case 4:
-                break;
+                    cs1v.Content = l1E.Sum();
+                    cs2v.Content = l2E.Sum();
+                    cs3v.Content = l3E.Sum();
+                    break;
                 default:
 
                 break;
@@ -197,5 +208,27 @@ namespace Lover
             verseny = 4;
             Jegyzes();
         }
+
+        private void nc_Click(object sender, RoutedEventArgs e)
+        {
+            verseny = 0;
+            cs11.Content = "";
+            cs21.Content = "";
+            cs31.Content = "";
+            cs12.Content = "";
+            cs22.Content = "";
+            cs32.Content = "";
+            cs13.Content = "";
+            cs23.Content = "";
+            cs33.Content = "";
+            cs1v.Content = "";
+            cs2v.Content = "";
+            cs3v.Content = "";
+
+            l1_kesz = false;
+            l2_kesz = false;
+            l3_kesz = false;
+        }
+
     }
 }
